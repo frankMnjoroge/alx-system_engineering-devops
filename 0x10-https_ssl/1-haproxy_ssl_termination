@@ -33,18 +33,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  frankMnjoroge-frontend-http
+frontend  frankmnjoroge-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend frankMnjoroge-backend
+        default_backend frankmnjoroge-backend
 
-frontend frankMnjoroge-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.frankmnjoroge.tech
+frontend frankmnjoroge-frontend-https
+	bind *:443 ssl crt /etc/haproxy/certs/www.frankmnjoroge.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend frankMnjoroge-backend
+	default_backend frankmnjoroge-backend
 
-backend frankMnjoroge-backend
+backend frankmnjoroge-backend
         balance roundrobin
         server 497806-web-01 100.25.142.92:80 check
         server 497806-web-02 100.25.109.236:80 check
