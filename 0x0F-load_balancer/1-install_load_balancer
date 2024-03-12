@@ -17,9 +17,8 @@ backend frankmnjoroge.tech_backend
     timeout connect  3000
     timeout server  30000
     balance roundrobin
-    server 228560-web-01 100.25.142.92:80 check
-    server 228560-web-02 100.25.109.236:80 check
+    server 497806-web-01 100.25.142.92:80 check
+    server 497806-web-02 100.25.109.236:80 check
 EOT
 
 sudo service haproxy restart
-
