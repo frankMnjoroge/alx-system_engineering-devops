@@ -41,7 +41,7 @@ frontend frankmnjoroge.tech
 backend frankmnjoroge.tech
     balance roundrobin
     server 497806-web-01 34.201.61.110:80 check
-    server 497806-web-02 100.25.109.236:80 check
+    server 497806-web-02 100.26.211.215 check
 "
 
 # shellcheck disable=SC2154
